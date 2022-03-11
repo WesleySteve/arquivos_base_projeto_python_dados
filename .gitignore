@@ -130,7 +130,5 @@ dmypy.json
 
 # projeto
 
-.vscode
-
 *.db
 *.csv
