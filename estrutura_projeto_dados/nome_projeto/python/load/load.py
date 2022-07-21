@@ -8,11 +8,13 @@ from bancoslib.db.sqlite import create_db_sqlite
 def data_load(data_raw, raw_dir, banco_dir=None):
     """Função responsavel em carregar os dados no banco de dados"""
 
+    nome_banco = str(input("Digite o nome do banco de dados: "))
+
     if banco_dir == None:
 
-        con = create_db_sqlite(raw_dir)
+        con = create_db_sqlite(raw_dir, nome_banco)
 
-    con = create_db_sqlite(banco_dir)
+    con = create_db_sqlite(banco_dir, nome_banco)
 
     if con:
 
