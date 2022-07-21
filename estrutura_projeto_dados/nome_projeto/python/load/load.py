@@ -10,7 +10,7 @@ def data_load(data_raw, raw_dir, banco_dir=None):
 
     nome_banco = str(input("Digite o nome do banco de dados: "))
 
-    if banco_dir == None:
+    if banco_dir is None:
 
         con = create_db_sqlite(raw_dir, nome_banco)
 

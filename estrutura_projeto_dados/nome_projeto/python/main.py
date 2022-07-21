@@ -17,12 +17,10 @@ if __name__ == "__main__":
     # Collect
     data_raw, raw_dir = data_collect(RAW_DIR)
 
-    if data_raw != []:
+    if data_raw != [] and raw_dir != "":
 
         # Load
-        data_load(data_raw, raw_dir, banco_dir=BANCO_DIR)
-
-        if data_load:
+        if data_load(data_raw, raw_dir, banco_dir=BANCO_DIR):
 
             print("Banco de dadsos criado com sucesso!")
 
